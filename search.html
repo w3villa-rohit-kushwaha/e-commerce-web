@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+    <head>
+             
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- *****************Bootstrap CDN********************************* -->
+        <!-- Latest compiled and minified CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+        <!-- Latest compiled JavaScript -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+        <!-- *******************Font awesome CDN **************************** -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+            integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <!-- ******************Google Fonts********************************** -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Gloock&family=Lobster&family=PT+Serif:ital@1&family=Poppins:ital,wght@1,200&family=Roboto:wght@100;400&family=Rubik&display=swap"
+            rel="stylesheet">
+
+
+        <title>JSON example</title>
+        <link href="search.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <link href="style2.css" rel="stylesheet">
+    </head>
+    <body >
+        
+      <!-- header.js file id import here -->
+     <div id="header-js"></div>
+
+     <div  id="searchfull" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+        <div class="container-fluid ">
+          <div class="row">
+            <div class="col-md-3 mt-4 bg-light">
+                 <div><h1>Searched item</h1></div>
+                 <div id ="hidediv">
+            <div style=" display: flex;justify-content: space-between;">
+               <div class="mt-4"><h4>Filter</h4></div>
+               <div> <button class="btn mt-4 btn-primary"><i class="fa-solid fa-circle-xmark"></i>&nbsp;&nbsp;clear</button></div>
+               </div>
+              <div>
+                <div style=" display: flex;justify-content: space-between;">
+                <div> <h6 class="classBlue mt-4">PRICE</h6></div>
+                <div onclick="myFunction1()" class="icons mt-3" id="minus"><h3>-</h3></div>
+              </div>
+               <div id="price-div">
+                <input type="range" id="price-range" name="price-range" min="10" max="1000" value="10">
+                <span id="price-value">$10 - $1000</span>
+              </div>
+              <hr class="hhhhw">
+              </div>
+              <div style=" display: flex;justify-content: space-between;">
+             <h6 class="classBlue mt-4">AVAILABILITY</h6>
+              <div onclick="myFunction2()" class="mt-3" id="minus1"><h3>-</h3></div>
+            </div>
+              <div id="avoil-div">
+                <div> <input type="checkbox"> In stock</div>
+                <input type="checkbox"> Out of stock
+              </div>
+              <hr class="hhhhw">
+              <div style=" display: flex;justify-content: space-between;">
+              <h6 class="classBlue mt-4">SUBCATEGORIES</h6>
+              <div onclick="myFunction3()" class="mt-3" id="minus2"><h3>-</h3></div>
+            </div>
+            <div id="elect">
+              <div style="display: flex; align-items: center;">
+                <img src="img/bag.jpg" height="70px" width="70px"><span>Electronics</span>
+              </div>
+            </div>
+            <hr class="hhhhw">
+            <div style=" display: flex;justify-content: space-between;">
+              <h6 class="classBlue mt-4">BRANDS</h6>
+              <div onclick="myFunction4()" class="mt-3" id="minus3"><h3>-</h3></div>
+            </div>
+            <div id="imggall">
+              <div style="display: flex ;align-items: center;">
+                <span><img src="img/large_vitalvale.png" class="imggal" height="70px" width="70px"></span>
+                <span><img src="img/logo-envato.png" class="imggal" height="70px" width="70px"></span>
+                <span><img src="img/logo-givve.png" class="imggal" height="70px" width="70px"></span>
+              </div>
+            </div>
+            <hr class="hhhhw">
+              <div style=" display: flex;justify-content: space-between;">
+                <div><h6 class="classBlue mt-4">SELECT</h6></div>
+                <div onclick="myFunction5()" class="mt-3" id="minus4"><h3>-</h3></div>
+              </div>
+                <div id="select">
+                <div> <input type="checkbox"> Red</div>
+                <input type="checkbox"> Green
+                <div> <input type="checkbox"> Blue</div>
+                <input type="checkbox"> Yellow
+                <div> <input type="checkbox"> Pink</div>
+                <input type="checkbox"> Black
+              </div>
+              <hr class="hhhhw">
+              <div style=" display: flex;justify-content: space-between;">
+                <h6 class="classBlue mt-4">RADIO</h6>
+                <div onclick="myFunction6()" class="mt-3" id="minus5"><h3>-</h3></div>
+              </div>
+                <div id="radio">
+                  <div> <input type="checkbox"> small</div>
+                <input type="checkbox"> medium
+                <div> <input type="checkbox"> large</div>
+                </div>
+                <hr class="hhhhw">
+              <div style=" display: flex;justify-content: space-between;">
+                <h6 class="classBlue mt-4">COLOR</h6>
+                <div onclick="myFunction7()" class="mt-3" id="minus6"><h3>-</h3></div>
+              </div>
+                <div id="color">
+                  <div> <input type="checkbox"> Red</div>
+                <input type="checkbox"> Green
+                </div>
+             
+            </div>
+            </div>
+            <div class="col-md-9">
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-6">
+                <form>
+                  <input type="text" id="newsearch" placeholder="Search..."></div>
+                  <div class="col-md-6">
+                  <select id="newselect">
+                    <option value="all">All Categories</option>
+                    <option value="category1">Category 1</option>
+                    <option value="category2">Category 2</option>
+                    <option value="category3">Category 3</option>
+                  </select>
+                   </div>
+                   
+                <div class="mt-4"></div>
+                <div> <input type="checkbox"> Search in subcategories</div>
+                  <div><input type="checkbox"> Search in productdiscription</div>
+                  
+                  <button id="newbutton" type="submit">Search</button>
+                  <h4 class="mt-4">Products meeting the search criteria :</h4>
+                  <div id="producthr"></div>
+                  <div class="mt-4" id="hhhww"></div>
+                  <div  class="mt-4" style="display: flex; justify-content: space-between;">
+                    <div style="display: flex; justify-content: space-between;" >
+                      <i class="fa-solid fa-regular fa-bars"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <i class="fa-solid fa-regular fa-bars"></i>&nbsp;&nbsp;&nbsp;&nbsp;
+                      <i class="fa-solid Blue fa-right-left"></i>&nbsp;&nbsp;<div class="Blue">Product Compare</div> 
+                    </div>
+                    <div  style="display: flex; justify-content: space-between;">
+                      <div>Sort By:</div>
+                      <div>
+                        <select>
+                          <option>Default</option>
+                          <option>High to Low</option>
+                          <option>Low to High</option>
+                        </select>
+                        </div>
+                      </div>
+                    <div  style="display: flex; justify-content: space-between;">
+                      <div>Show:</div>
+                      <div>
+                        <select>
+                          <option>10</option>
+                          <option>20</option>
+                          <option>30</option>
+                          <option>40</option>
+                        </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="mt-4" id="hhhww"></div>
+                  <div class="mt-4" id="searcheditem"></div>
+                </form>
+              </div>
+    
+            </div>
+             
+            </div>
+          </div>
+        </div>
+        
+       </div>
+       </div> 
+ <div class="most-viewed container-fluid">
+        <div class="row">
+          <div class="container">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+              <h2 class="text-white "><u>RECENTY VIEWED</u></h2>
+              <hr class="bg-danger" style="width: 150px; height: 1.5px; margin: 0;">
+            </div>
+            </div>
+            <div class="col-md-3 d-flex ">
+
+                <div class="images">
+                    <img src="img/bag.jpg" height="120px" width="100px" />
+                </div>
+                <div class="name">
+                    <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                    <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                            class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                </div>
+            </div>
+
+            <div class=" col-md-3 d-flex">
+
+                <div class="images">
+                    <img src="img/headphones.jpg" height="120px" width="100px" />
+                </div>
+                <div class="name">
+                    <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                    <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                            class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                </div>
+            </div>
+            <div class=" col-md-3 d-flex">
+
+                <div class="images">
+                    <img src="img/shoes.jpg" height="120px" width="100px" />
+                </div>
+                <div class="name">
+                    <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                    <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                            class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                </div>
+            </div>
+            <div class="col-md-3 d-flex">
+
+                <div class="images">
+                    <img src="img/smartwatch.jpg" height="120px" width="100px" />
+                </div>
+                <div class="name">
+                    <p>Oversized Sunglasses For Lon...<br>$397.00</p>
+                    <p><i class="fa-solid fa-cart-shopping"></i> <i class="fa-regular fa-heart"></i> <i
+                            class="fa-solid fa-arrow-right-arrow-left"></i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+       <script>
+
+let id = parseInt(localStorage.getItem("productId"));
+
+fetch("productData.json")
+  .then(response => response.json())
+  .then(data => {
+    console.log(data);
+    const product = data.products.find(product => product.id === id);
+    if(product) {
+      displayProduct(product);
+    } else {
+      const matchesString = localStorage.getItem("productId2");
+      const matches = JSON.parse(matchesString);
+      displayMatches(matches);
+    }
+  })
+  .catch(error => console.error(error));
+
+
+  function displayProduct(product) {
+  document.getElementById("searcheditem").innerHTML = `    <div class="card m-4" style="width:310px">
+      <div class="badge-overlay">
+        <span class="top-left badge"></span>
+      </div>
+      <img src=${product.image} class="card-img-top" width="100%" height="300px">
+      <div class="card-body pt-0 px-0">
+        <div class="d-flex flex-row justify-content-between p-3 mid">
+          <a class="d-flex flex-column text-muted mb-1">
+            ${product.category}
+          </a>
+          <p class="d-flex flex-column text-muted mb-2">${product.brand}</p>
+        </div>
+        <div class="left-name">
+          <strong>${product.name}</strong>
+          <p> $${product.price}&nbsp; &nbsp;&nbsp;&nbsp;<s>$${product.preprice}</s></p>
+        </div>
+        <div class="add mx-3 mt-3 d-block">
+          <input type="number" class="quantity__input" value="1">
+          <button type="button" onclick="getProductData(event, ${product.id},'cart')" class="btn btn-danger btn-block mb-1">ADD TO CART</button>
+          &nbsp; &nbsp; &nbsp;
+          <i class="fa-regular fa-heart mb-2" onclick="getProductData(event,${product.id},'wishlist')"></i> &nbsp; &nbsp;
+          <i class="fa-solid  fa-arrow-right-arrow-left"></i>
+        </div>
+        <div class="d-flex flex-row justify-content-between p-3 mid">
+          <p class="d-flex flex-column mb-1">
+            <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
+          </p>
+          <p class="d-flex flex-column mb-2">
+            <i class="fa-solid fa-question" style="color: red;"></i>Question
+          </p>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function displayMatches(matches) {
+  let a = document.getElementById("searcheditem");
+  a.innerHTML = ``;
+  if (matches.length === 0) {
+    a.innerHTML = "<p>No products found.</p>";
+    return;
+  }
+
+
+  console.log(matches.length);
+  for(let i=0;i<matches.length;i++)
+  {
+    a.innerHTML +=`<div class="card m-4" style="width:310px">
+      <div class="badge-overlay">
+        <span class="top-left badge"></span>
+      </div>
+
+      <img src=${matches[i].image} class="card-img-top" width="100%" height="300px">
+      <div class="card-body pt-0 px-0">
+        <div class="d-flex flex-row justify-content-between p-3 mid">
+          <a class="d-flex flex-column text-muted mb-1">
+            ${matches[i].category}
+          </a>
+          <p class="d-flex flex-column text-muted mb-2">${matches[i].brand}</p>
+        </div>
+        <div class="left-name">
+          <strong>${matches[i].name}</strong>
+          <p> $${matches[i].price}&nbsp; &nbsp;&nbsp;&nbsp;<s>$${matches[i].preprice}</s></p>
+        </div>
+        <div class="add mx-3 mt-3 d-block">
+          <input type="number" class="quantity__input" value="1">
+          <button type="button" onclick="getProductData(event, ${matches[i].id},'cart')" class="btn btn-danger btn-block mb-1">ADD TO CART</button>
+          &nbsp; &nbsp; &nbsp;
+          <i class="fa-regular fa-heart mb-2" onclick="getProductData(event,${matches[i].id},'wishlist')"></i> &nbsp; &nbsp;
+          <i class="fa-solid  fa-arrow-right-arrow-left"></i>
+        </div>
+        <div class="d-flex flex-row justify-content-between p-3 mid">
+          <p class="d-flex flex-column mb-1">
+            <i class="fa-solid fa-dollar" style="color: lightgreen;"></i>Buy Now
+          </p>
+          <p class="d-flex flex-column mb-2">
+            <i class="fa-solid fa-question" style="color: red;"></i>Question
+          </p>
+        </div>
+      </div>
+    </div>
+   `;
+  }
+}
+
+
+</script>
+    <!-- footer.js import here -->
+     <div id="footer"></div>
+
+     <script src="header.js" ></script>
+     <script src="footer.js" ></script>
+     <script src="seach.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+.modal-cart {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+  }
+  
+  .modal-cart:target {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content-cart {
+    background-color: white;
+    opacity: 1;
+    transform: translateY(-50px);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+  }
+  
+  .modal-cart:target .modal-content-cart {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .close-modal-cart {
+    top: 2px;
+    padding-left: 90%;
+    color: black;
+    text-decoration: none;
+    font-size: 35px;
+  }
+  .modal-link-cart {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  .chatbot {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  label {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+  }
+  
+  #price-range {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  #price-value {
+    display: inline-block;
+    margin-left: 10px;
+    font-weight: bold;
+  }
+  .classBlue{
+    color: #007bff;
+    text-decoration: underline;
+  }
+  .imggal{
+    border: 1px solid black;
+  }
+  .icons{
+    cursor: pointer;
+  }
+  
+  .hhhhw {
+    width: 100%;
+    /* color: black !important; */
+    background-color: black;
+    margin-left: 0px;
+}
+#newsearch{
+  margin-top: 30px;
+  padding: 8px 190px !important;
+}
+#newselect{
+  margin-top: 32px;
+  padding: 9px 240px;
+  margin-left: 10%;
+}
+#newbutton{
+  padding: 9px 25px;
+  margin-top: 28px;
+}
+#producthr{
+  background-color:  rgb(17, 8, 8) !important;
+ height: 3px;
+width: 9%;
+margin-left: 4%;
+}
+#hhhww{
+  background-color:  rgb(139, 134, 134) !important;
+  height: 3px;
+  width: 100% !important;
+}
+.Blue{
+  color: #007bff;
+  font-size: larger;
+}
+.searchimg{
+    margin: 5px 10px;
+}
+#searcheditem
+{
+  display: flex;
+  flex-wrap: wrap;
+}
